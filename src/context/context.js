@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import { linkData } from './linkData';
+import { socialData } from './socialData';
+
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state = {
         sidebarOpen: false,
         cartOpen: false,
-        noOfItem: 0
+        cartItems: 0,
+        links: linkData,
+        socialLinks: socialData,
+        cart: [],
+        cartSubTotal: 0,
+        cartTax: 0,
+        carTotal: 0,
+        storeProducts: [],
+        filteredProducts: [],
+        featuredProducts: [],
+        singleProduct: {},
+        loading: true
     };
     //handle side bar
     handleSidebar = () => {
