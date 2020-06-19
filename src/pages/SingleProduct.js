@@ -17,7 +17,7 @@ export default function SingleProduct() {
                     }
                     const {company, description, id, price, title, image} = singleProduct;
                 return (<h3>{title}</h3>);
-                }};
+                }}
             </ProductConsumer>
         </>
     )

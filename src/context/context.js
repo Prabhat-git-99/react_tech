@@ -16,7 +16,7 @@ class ProductProvider extends Component {
         cartSubTotal: 0,
         cartTax: 0,
         carTotal: 0,
-        storeProducts: [],
+        storedProducts: [],
         filteredProducts: [],
         featuredProducts: [],
         singleProduct: {},
@@ -130,7 +130,7 @@ class ProductProvider extends Component {
         // console.log('cart',this.state.cart);
     };
     setSingleProduct = (id) => {
-        let product = this.state.storeProducts.find(item => item.id === id);
+        let product = this.state.storedProducts.find(item => item.id === id);
         localStorage.setItem('singleProduct',JSON.stringify(product));
         this.setState({
             singleProduct: {...product},
