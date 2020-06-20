@@ -16,7 +16,32 @@ export default function SingleProduct() {
                         return <h1>Product Loading...</h1>
                     }
                     const {company, description, id, price, title, image} = singleProduct;
-                return (<h3>{title}</h3>);
+                return <section className='py-5'>
+                    <div className='container'>
+                        <div className='row'>
+                            <div className='col-10 mx-auto col-sm-8 col-md-6 my-3'>
+                                <img src={`../${image}`} alt='single' className='img-fluid' />
+                            </div>
+                            <div className='col-10 mx-auto col-sm-8 col-md-6 my-3'>
+                <h5 className='text-title mb-4'>model :{title}</h5>
+                            <h5 className='text-capitalize text-muted mb-4'>company : {company}</h5>
+                            <h5 className='text-main text-capitalize mb-4'>
+                                price : ${price}
+                            </h5>
+                            <p className='text-capitalize text-title mt-3'>
+                                some info about product :
+                            </p>
+                            <p>{description}</p>
+                            <button onClick={() => addToCart(id)} type='button' className='main-link' style={{margin:'0.75rem'}}>
+                                add to cart
+                            </button>
+                            <Link to='/products' className='main-link' style={{margin:'0.75rem'}}>
+                                All products
+                            </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>;
                 }}
             </ProductConsumer>
         </>

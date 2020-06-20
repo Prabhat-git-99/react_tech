@@ -2,7 +2,10 @@ import React from 'react';
 import { FaBars, FaCartPlus } from 'react-icons/fa';
 import { ProductConsumer } from '../context';
 import styled from 'styled-components';
-import logo from '../images/logo.svg';
+// import logo from '../images/logo.svg';
+// import logo from '../images/download3.svg';
+import logo from '../images/logo5.png';
+
 
 export default function Navbar() {
     return (
